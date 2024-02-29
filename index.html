@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+
+  <meta
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    name="viewport"
+  />
+
+  <title>Embedded Systems</title>
+
+  <meta property="og:title" content="Homepage | Atlas Template" />
+
+  <meta property="og:locale" content="en_US" />
+
+  <link
+    rel="canonical"
+    href="https://atlas.tailwindmade.com/"
+  />
+
+  <meta
+    property="og:url"
+    content="https://atlas.tailwindmade.com/"
+  />
+
+  <meta
+    name="description"
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  />
+
+  <link rel="icon" type="image/png" href="/assets/img/stickman.png" />
+
+  <meta property="og:site_name" content="Atlas Template" />
+
+  <meta property="og:image" content="https://atlas.tailwindmade.com/assets/img/social.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <meta name="twitter:site" content="@tailwindmade" />
+
+  <link
+    crossorigin="crossorigin"
+    href="https://fonts.gstatic.com"
+    rel="preconnect"
+  />
+
+  <link
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="preload"
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+  />
+
+  <link
+    crossorigin="anonymous"
+    href="/assets/styles/main.min.css"
+    media="screen"
+    rel="stylesheet"
+  />
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/atom-one-dark.min.css"
+  />
+
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+
+  <!--Alpine Js V3-->
+  <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+
+
+  <body
+    x-data="global()"
+    x-init="themeInit()"
+    :class="isMobileMenuOpen ? 'max-h-screen overflow-hidden relative' : ''"
+    class="dark:bg-primary"
+  >
+    
+    <div id="main">
+      <div class="container mx-auto">
+  <div class="flex items-center justify-between py-6 lg:py-10">
+    <a href="/" class="flex items-center">
+      <span href="/" class="mr-2">
+        <img src="/assets/img/stickman.png" alt="logo" />
+      </span>
+      <p
+        class="hidden font-body text-2xl font-bold text-primary dark:text-white lg:block"
+      >
+        Mark Ochieng
+      </p>
+    </a>
+    <div class="flex items-center lg:hidden">
+      <i
+        class="bx mr-8 cursor-pointer text-3xl text-primary dark:text-white"
+        @click="themeSwitch()"
+        :class="isDarkMode ? 'bxs-sun' : 'bxs-moon'"
+      ></i>
+
+      
+    </div>
+    <div class="hidden lg:block">
+      <ul class="flex items-center">
+        
+        <li class="group relative mr-6 mb-1">
+          <div
+            class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow"
+          ></div>
+          <a
+            href="/"
+            class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary"
+            >Intro</a
+          >
+        </li>
+        
+        <li class="group relative mr-6 mb-1">
+          <div
+            class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow"
+          ></div>
+          <a
+            href="/blog"
+            class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary"
+            >Blog</a
+          >
+        </li>
+        
+        <li class="group relative mr-6 mb-1">
+          <div
+            class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow"
+          ></div>
+          <a
+            href="/uses"
+            class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary"
+            >Uses</a
+          >
+        </li>
+        
+        <li class="group relative mr-6 mb-1">
+          <div
+            class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow"
+          ></div>
+          <a
+            href="/contact"
+            class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary"
+            >Contact</a
+          >
+        </li>
+        
+        <li>
+          <i
+            class="bx cursor-pointer text-3xl text-primary dark:text-white"
+            @click="themeSwitch()"
+            :class="isDarkMode ? 'bxs-sun' : 'bxs-moon'"
+          ></i>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div
+  class="pointer-events-none fixed inset-0 z-50 flex bg-black bg-opacity-80 opacity-0 transition-opacity lg:hidden"
+  :class="isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : ''"
+>
+  <div class="ml-auto w-2/3 bg-green p-4 md:w-1/3">
+    <i
+      class="bx bx-x absolute top-0 right-0 mt-4 mr-4 text-4xl text-white"
+      @click="isMobileMenuOpen = false"
+    ></i>
+    <ul class="mt-8 flex flex-col">
+      
+      <li class="">
+        <a
+          href="/"
+          class="mb-3 block px-2 font-body text-lg font-medium text-white"
+          >Intro</a
+        >
+      </li>
+      
+      <li class="">
+        <a
+          href="/blog"
+          class="mb-3 block px-2 font-body text-lg font-medium text-white"
+          >Blog</a
+        >
+      </li>
+      
+      <li class="">
+        <a
+          href="/uses"
+          class="mb-3 block px-2 font-body text-lg font-medium text-white"
+          >Uses</a
+        >
+      </li>
+      
+      <li class="">
+        <a
+          href="/contact"
+          class="mb-3 block px-2 font-body text-lg font-medium text-white"
+          >Contact</a
+        >
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+      <div><div class="container mx-auto">
+  <div class="border-b border-grey-lighter py-16 lg:py-20">
+    <div>
+      <img src="https://avatars.githubusercontent.com/u/156787501?v=4.jpg" class="h-16 w-16" alt="author" />
+    </div>
+    <h1
+      class="pt-3 font-body text-4xl font-semibold text-primary dark:text-white md:text-5xl lg:text-6xl"
+    >
+      Hello,I'm Mark Ochieng.
+    </h1>
+    <p class="pt-3 font-body text-xl font-light text-primary dark:text-white">
+    This is what i've learnt at gearbox
+    </p>
+    <a
+      href="https://egonormist.github.io/webserver/"
+      class="mt-12 block bg-secondary px-10 py-4 text-center font-body text-xl font-semibold text-white transition-colors hover:bg-green sm:inline-block sm:text-left sm:text-2xl"
+    >
+      Go to Main Website
+    </a>
+  </div>
+
+  <div class="border-b border-grey-lighter py-16 lg:py-20">
+    <div class="flex items-center pb-6">
+      <img src="/assets/img/icon-story.png" alt="icon story" />
+      <h3
+        class="ml-3 font-body text-2xl font-semibold text-primary dark:text-white"
+      >
+        How I Came To Join
+      </h3>
+    </div>
+    <div>
+      <p class="font-body font-light text-primary dark:text-white">
+        Joining gearbox academy for me was very easy finding that it was my father who had come to visit here and recommened it to me.<br>
+        For sure it has proven to be the best for me and I do not regret my decision.
+        <br />
+        <br /> 
+      </p>
+    </div>
+  </div>
+
+  <div class="py-16 lg:py-20">
+    <div class="flex items-center pb-6">
+      <img src="/assets/img/icon-story.png" alt="icon story" />
+      <h3
+        class="ml-3 font-body text-2xl font-semibold text-primary dark:text-white"
+      >
+        Embedded Systems Course
+      </h3>
+      <a
+        href="https://egonormist.github.io/webserver/#project"
+        class="flex items-center pl-10 font-body italic text-green transition-colors hover:text-secondary dark:text-green-light dark:hover:text-secondary"
+      >
+        The pictures
+        <img
+          src="/assets/img/long-arrow-right.png"
+          class="ml-3"
+          alt="arrow right"
+        />
+      </a>
+    </div>
+    <div class="pt-8">
+      <div class="flex items-center">
+          <span
+            class="mb-4 inline-block rounded-full bg-grey-light px-2 py-1 font-body text-sm text-blue-dark"
+            >Module 1</span
+          >
+          <span
+            class="mb-4 ml-4 inline-block rounded-full bg-yellow-light px-2 py-1 font-body text-sm text-yellow-dark"
+            >Introduction to Embedded Systems</span
+          >
+        </div>
+        <a
+          
+
+          class="block font-body text-lg font-semibold text-primary transition-colors hover:text-green dark:text-white dark:hover:text-secondary"
+          >Here I was introduced to the Embedded Systems course.<br>
+          The programming language used with pico is Micropython.<br>
+          MicroPython is a full implementation of the Python 3 programming language that runs directly on embedded hardware like Raspberry Pi Pico. You get an interactive prompt (the REPL) to execute commands immediately via USB Serial, and a built-in filesystem.
+The Pico port of MicroPython includes modules for accessing low-level chip-specific hardware.Pico is programmed by connecting it to a computer via USB, then dragging and dropping a file onto it and adding a downloadable UF2 file to install MicroPython more easily.
+The UF2 file is suitable for flashing microcontrollers over MSC (Mass Storage Class; aka removable flash drive).<br>
+          An embedded system is a microprocessor-based computer hardware system with software that is designed to perform a dedicated function, either as an independent system or as a part of a large system. At the core is an integrated circuit designed to carry out computation for real-time operations.<br>
+          I was taught about project management and documentation as it was mandatory for all the students to document everything learnt by the end of the course<br>
+          I was also introduced to the Raspberry Pi Pico and two IDEs(Thonny and Arduino),how to install the IDEs and using the IDEs together with the Pico in blinking LEDs and even making Traffic Lights.<br>
+          I was also taught on how to use Git and Github, the installation, seutup and the related github codes.<br> 
+          Here below is the raspberry pi pico pinout👇
+          <span href="/" class="mr-2">
+        <img src="/assets/img/pico.jpg" alt="logo" />
+      </span>
+      And the Pico itself👇<br>
+       <span href="/" class="mr-2">
+        <img src="/assets/img/picoo.jpg" alt="logo" />
+      </span>
+          </a>
+          </a><br>
+          
+      </div>
+      <div class="border-b border-grey-lighter pt-10 pb-8">
+        <div class="flex items-center">
+          <span
+            class="mb-4 inline-block rounded-full bg-grey-light px-2 py-1 font-body text-sm text-blue-dark"
+            >Module 2</span
+          >
+          <span
+            class="mb-4 ml-4 inline-block rounded-full bg-yellow-light px-2 py-1 font-body text-sm text-yellow-dark"
+            >Embedded Systems II</span
+          >
+        </div>
+        <a
+          
+          class="block font-body text-lg font-semibold text-primary transition-colors hover:text-green dark:text-white dark:hover:text-secondary"
+          >I was first provided with a kit with many components.<br>
+          With the infomation learnt in Module 1, here I was made to understand the electrical components which are in the kit provided.<br>
+          In the kit there are many components such as: PIR sensor, Ultrasonic Distance Sensor, RFID, remote Controle module...e.t.c.<br>
+          I was taught how to interface the internal & external LEDs, pushbuttons and switches using Pico.<br>
+          I was also introduced to sensors and actuators and also learnt how to configure the Servo Motor, Ultrasonic Distance Sensor and PIR. <br>
+          Here is a picture of a servo motor which is included in the kit,<br> connected to a Pico👇<br>
+           <span href="/" class="mr-2">
+        <img src="/assets/img/serevela.jpg" alt="logo" />
+      </span>
+          </a>
+        </a>
+      </div>
+            <div class="border-b border-grey-lighter pt-10 pb-8">
+        <div class="flex items-center">
+          <span
+            class="mb-4 inline-block rounded-full bg-grey-light px-2 py-1 font-body text-sm text-blue-dark"
+            >Module 3</span
+          >
+          <span
+            class="mb-4 ml-4 inline-block rounded-full bg-yellow-light px-2 py-1 font-body text-sm text-yellow-dark"
+            >Embedded Systems III</span
+          >
+        </div>
+        <a
+          
+          class="block font-body text-lg font-semibold text-primary transition-colors hover:text-green dark:text-white dark:hover:text-secondary"
+          >This is the shortest module in the course.<br>
+          This is where I was introduced to the ESP-32 and ESP-32cam and its IDE(Arduino).<br>
+          I was taught how to programme the ESP-32 with Arduino, which also involved building simple LED projects Using ESP-32.<br>
+          Point to note is that Arduino uses a variant of the C++ programming language. The code is written in C++ with an addition of special methods and functions.<br>
+          This is the ESP-32👇<br>
+           <span href="/" class="mr-2">
+        <img src="/assets/img/esp32.jpg" alt="logo" />
+      </span>
+      With a section of arduino code👇
+       <span href="/" class="mr-2">
+        <img src="/assets/img/Screenshot 2024-02-28 120919.jpg" alt="logo" />
+      </span>
+          </a>
+          </a>
+        </a>
+      </div>
+            <div class="border-b border-grey-lighter pt-10 pb-8">
+        <div class="flex items-center">
+          <span
+            class="mb-4 inline-block rounded-full bg-grey-light px-2 py-1 font-body text-sm text-blue-dark"
+            >Module 4</span
+          >
+          <span
+            class="mb-4 ml-4 inline-block rounded-full bg-yellow-light px-2 py-1 font-body text-sm text-yellow-dark"
+            >Microcontroller Programming And Access Control Systems I</span
+          >
+        </div>
+        <a
+          
+          class="block font-body text-lg font-semibold text-primary transition-colors hover:text-green dark:text-white dark:hover:text-secondary"
+          >This is where I learnt the Communication Protocols!<br>
+          The protocols are many in number but here we learn only 3.<br>
+          The protocols are:<ul>
+            <li>SPI - Serial Peripheral Interface</li>
+            <li>I2C - Inter Integrated Circuit</li>
+            <li>UART - Universal Asynchronous Receiver/Transmitter</li>
+          </ul><br>
+          With these, I was taught on how to interface all of them with the RPI Pico and ESP-32 in depth.<br>
+          There are even modes of serial communication which are: <ul>
+            <li>Simplex - This uses one line whereby the sender first sends the desired output but the receiver cannot reply.</li>
+            <li>Half Duplex - This uses one line whereby the sender first sends the dsired output and the receiver replies but cannot do so at the same time. This is mainly used in Walkie Talkies</li>
+            <li>Full Duplex - This uses 2 lines whereby the sender and receiver are able to communicate at the same time.</li>
+          </ul><br> 
+          The communication protocols are used to control devices such as the OLED screen - SPI, AHT10(Temperature and Humidity Sensor) - I2C and many others.<br>
+          Here we have the oled to emphasize 👇<br>
+           <span href="/" class="mr-2">
+        <img src="/assets/img/olady.jpg" alt="logo" />
+      </span>
+          </a>
+        </a>
+      </div>
+            <div class="border-b border-grey-lighter pt-10 pb-8">
+        <div class="flex items-center">
+          <span
+            class="mb-4 inline-block rounded-full bg-grey-light px-2 py-1 font-body text-sm text-blue-dark"
+            >Module 5</span
+          >
+          <span
+            class="mb-4 ml-4 inline-block rounded-full bg-yellow-light px-2 py-1 font-body text-sm text-yellow-dark"
+            >Microcontroller Programming And Access Control Systems II</span
+          >
+        </div>
+        <a
+          
+          class="block font-body text-lg font-semibold text-primary transition-colors hover:text-green dark:text-white dark:hover:text-secondary"
+          >This module mainly emphasizes the use of a Relay.
+          The relay is used as a link between two devices with different voltage requirements such as the Raspberry Pi Pico and any other device connected to the mains electricity as the pico requires 5volts while the mains had 240 volts. <br>
+          In this module I learnt how to use the two locks(electric and magnetic)with pico and this was after being taught the basics and the workings of the locks.<br>
+          I was eventually taught how to use the RFID with the locks.This RFID(Radio Frequency Identification)is a device which uses radio waves so as to give an output which is received by a card or a keytab with a module and feedback is sent to give the go ahead or reject access.<br>
+          After this module one can easily make a fully automated door lock controlled autonomously with a keycard rather than the old fashioned keys.<br>
+           Here we have the remote control and RFID Module👇<br>
+           <span href="/" class="mr-2">
+        <img src="/assets/img/remota.jpg" alt="logo" />
+      </span>
+          </a>
+           <span href="/" class="mr-2">
+        <img src="/assets/img/rfid.jpg" alt="logo" />
+      </span>
+          </a>
+
+        </a>
+      </div>
+            <div class="border-b border-grey-lighter pt-10 pb-8">
+        <div class="flex items-center">
+          <span
+            class="mb-4 inline-block rounded-full bg-grey-light px-2 py-1 font-body text-sm text-blue-dark"
+            >Module 6</span
+          >
+          <span
+            class="mb-4 ml-4 inline-block rounded-full bg-yellow-light px-2 py-1 font-body text-sm text-yellow-dark"
+            >Student's Project</span
+          >
+        </div>
+        <a
+          
+          class="block font-body text-lg font-semibold text-primary transition-colors hover:text-green dark:text-white dark:hover:text-secondary"
+          >My Student Project - Simple Irrigation System.<br>
+          Skeleton of my project👇<br>
+           <span href="/" class="mr-2">
+        <img src="/assets/img/project-1.jpg" alt="logo" />
+      </span>
+          </a>
+
+        </a>
+      </div>
+  </div>
+
+  
+
+      <div class="container mx-auto">
+  <div
+    class="flex flex-col items-center justify-between border-t border-grey-lighter py-10 sm:flex-row sm:py-12"
+  >
+    <div class="mr-auto flex flex-col items-center sm:flex-row">
+      <a href="/" class="mr-auto sm:mr-6">
+        <img src="/assets/img/stickman.png" alt="logo" />
+      </a>
+      <p class="pt-5 font-body font-light text-primary dark:text-white sm:pt-0">
+        ©2024 Mark Ochieng.
+      </p>
+    </div>
+    <div class="mr-auto flex items-center pt-5 sm:mr-0 sm:pt-0">
+      
+      <a href="https://github.com/egonormist " target="_blank">
+        <i
+          class="text-4xl text-primary dark:text-white pl-5 hover:text-secondary dark:hover:text-secondary transition-colors bx bxl-github"
+        ></i>
+      </a>
+      
+      <a href="https://instagram.com/markyearnsb00ty " target="_blank">
+        <i
+          class="text-4xl text-primary dark:text-white pl-5 hover:text-secondary dark:hover:text-secondary transition-colors bx bxl-instagram"
+        ></i>
+      </a>
+      
+      <a href="https://www.twitter.com/ " target="_blank">
+        <i
+          class="text-4xl text-primary dark:text-white pl-5 hover:text-secondary dark:hover:text-secondary transition-colors bx bxl-twitter"
+        ></i>
+      </a>
+      
+    </div>
+  </div>
+</div>
+
+    </div>
+
+    <script src="/assets/js/main.js"></script>
+
+    
+  </body>
+</html>
